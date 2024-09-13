@@ -1,0 +1,110 @@
+/* Reset margins and paddings for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App should cover the full screen */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5eaf5;
+  /* Optional: A light background color */
+}
+
+/* Container to occupy the full screen but scale responsively */
+.App {
+  width: 100%;
+  min-height: 90vh;
+  /* Scales with 90% of the viewport height */
+  min-width: 90vw;
+  /* Scales with 90% of the viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.2vh rgb(62, 62, 172);
+  /* Border size relative to viewport height */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Nice shadow */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+/* Ensure GridImageComponent doesn't overflow the parent container */
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 90%;
+  min-height: 80vh;
+  border-left: solid 0.2vh #d0bdf4;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Button set styling */
+.grid-button-set {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 10px;
+  justify-content: center;
+  min-height: 85vh;
+}
+
+/* Button styling */
+.grid-button-set button {
+  background-color: transparent;
+  border: 1px solid #8458B3;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px 20px;
+  margin: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.grid-button-set button.selected {
+  background-color: #8458B3;
+  color: white;
+}
+
+.grid-button-set button:hover {
+  background-color: #d0bdf4;
+  color: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.grid-button-set button.selected:hover {
+  color: #fff;
+  background-color: #8458B3;
+}
+
+/* image set css */
+.image-set {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  max-width: 45vw;
+  min-height: 90vh;
+  overflow: hidden;
+  border: solid 2px #8458B3;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* image set css of images */
+.image-set img{
+  border: solid 2px #f75990;
+  border-radius: 5px;
+}
